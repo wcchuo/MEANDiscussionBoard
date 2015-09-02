@@ -1,0 +1,77 @@
+<div class="uk-container uk-grid">
+    <div class='uk-width-large-1-1'>
+        <div ng-controller="discussionsController" class="main2">
+	        <h2 class="white-font">Discussions</h2>
+	        <h4 class="white-font">Welcome  {{ user }}</h4>
+
+	        <div>
+	            <table class='uk-table uk-table-hover uk-table-striped white-background' style='border:1px solid silver;'>
+	                <thead class="white-background">
+	                    <tr>
+	                        <th><b>Category</b></td>
+	                        <th><b>Recent Topic</b></td>
+	                        <th><b>Time</b></td>
+	                        <th><b>Posted By</b></td>
+	                        <th><b>Posts</b></td>
+	                        <th><b>Action</b></td>
+	                    </tr>
+	                </thead>
+	                <tr ng-repeat="discussion in discussions">
+	                    <td>
+	                        <span ng-bind='discussion.discussion_category'></span>
+	                    </td>
+	                    <td>
+	                        <a ng-href='#/view_discussion/{{discussion._id}}'><span ng-bind='discussion.discussion_topic'></span></a>
+	                    </td>
+	                    <td>
+	                        <span ng-bind="discussion.discussion_created_at | date:'MMMM d yyyy h:mma'"></span>
+	                    </td>
+	                    <td>
+	                        <span ng-bind='discussion.discussion_name'></span>
+	                    </td>
+	                    <td>
+	                        
+	                    </td>
+	                    <td>
+	                        <form>
+		                        <a href='{{discussion._id}}/remove_discussion' class='uk-button uk-button-danger uk-button-mini'>Delete</a>
+	                        </form>
+	                    </td>	                    
+	                </tr>
+	            </table>
+	        </div>
+            <h3 class="white-font">Add a New Topic</h3>
+            <form class="uk-form">
+            	<input type="hidden" value="{{user}}" ng-model='newDiscussion.discussion_name'>
+	            <table class="white-font">
+		            <tr>
+		            	<td>Topic:</td>
+		            	<td><input type='text' class='uk-form-medium uk-form-width-large' ng-model='newDiscussion.discussion_topic' required /></td>
+		            </tr>
+		            <tr>
+		            	<td valign="top">Description:</td>
+		            	<td><textarea class='uk-form-medium uk-form-width-large' ng-model='newDiscussion.discussion_description' required rows="7"></textarea></td>
+		            </tr>
+		            <tr>
+		            	<td>Category:</td>
+		            	<td>
+		            		<select class="uk-form-width-large" ng-model='newDiscussion.discussion_category'>
+		            			<option value='' disabled>Choose a Category</option>
+		            			<option value='Ruby on Rails'>Ruby on Rails</option>
+		            			<option value='PHP'>PHP</option>
+		            			<option value='Javascript'>Javascript</option>
+		            			<option value='MEAN'>MEAN</option>
+		            			<option value='Swift'>Swift</option>
+		            		</select>
+		            	</td>
+		            </tr>
+		            <tr>
+		            	<td></td>
+		            	<td><button class='uk-button uk-button-primary uk-button-medium uk-float-right' ng-click='addDiscussion()'>Add</button></td>
+		            </tr>
+	            </table>
+            </form>
+
+        </div>
+    </div>
+</div>

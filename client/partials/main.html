@@ -1,0 +1,14 @@
+<div class="uk-container uk-grid">
+    <div class='uk-width-large-1-1'>
+        <div ng-controller="namesController" class="main">
+	        <h1 class="white-font">Hello!</h1>
+	        <h4 class="white-font">Please enter your name to join and share your ideas.</h4>
+
+	        <form class='uk-form'>
+		        <input type='text' class='uk-form-medium uk-form-width-large' ng-model='newName.name' required />
+                <a href='/#/discussions'><button class='uk-button uk-button-primary uk-button-medium' ng-click='addName()'>Enter</button></a>
+
+	        </form>
+        </div>
+    </div>
+</div>

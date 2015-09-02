@@ -1,0 +1,34 @@
+<div class="uk-container uk-grid">
+    <div class='uk-width-large-1-1'>
+        <div ng-controller="discussionsController" class="main2">
+	        <h2 class="white-font">Discussions</h2>
+
+	        <div ng-repeat="discussion in discussions" class='vspacer'>
+                <h3 class="white-font">Topic: {{ discussion.discussion_topic }}</h3>
+                <p class="white-font">Question: {{ discussion.discussion_description }}</p>
+
+            </div>	        
+
+            <hr>
+            <h4 class="white-font">Post Answer:</h4>
+            <form class="uk-form">
+	            <table class="white-font">
+		            <tr>
+		            	<td>Your Name:</td>
+		            	<td><input type='hidden' class='uk-form-medium uk-width-1-1 uk-form-small' ng-model='newDiscussion.discussion_topic' disabled /></td>
+		            </tr>
+		            <tr>
+		            	<td valign="top">Answer:</td>
+		            	<td><textarea class='uk-form-medium uk-form-width-large' ng-model='newDiscussion.discussion_description' required rows="7"></textarea></td>
+		            </tr>
+
+		            <tr>
+		            	<td></td>
+		            	<td><button class='uk-button uk-button-primary uk-button-medium uk-float-right' ng-click='addDiscussion()'>Submit</button></td>
+		            </tr>
+	            </table>
+            </form>
+
+        </div>
+    </div>
+</div>

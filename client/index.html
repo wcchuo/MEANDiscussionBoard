@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="uk-height-1-1">
+<head>
+    <title>MEAN Discussion Board</title>
+    <script src="./static/js/jquery-2.1.4.min.js"></script>
+    <script src="./static/js/angular.min.js"></script>
+    <script src="./static/js/ngcookies.js"></script>
+    <script src="./static/js/angular-route.min.js"></script>
+    <script src="./static/js/uikit.min.js"></script>
+    <script src="./static/js/script.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/uikit.gradient.min.css" />
+    <script type="text/javascript">
+
+    </script>>
+</head>
+<body ng-app='myApp' class="background uk-height-1-1">
+    <div class="uk-container uk-container-center uk-height-1-1 uk-overflow-container">
+
+        <nav class="uk-navbar uk-margin-top uk-margin-small-bottom">
+            <a class="uk-navbar-brand uk-hidden-small" href="/">Discussion</a>
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li>
+                    <a href="/"><i class="uk-icon-home uk-icon-small"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#/discussions"><i class="uk-icon-desktop uk-icon-small"></i> Discussions</a>
+                </li>
+                <li>
+                    <a href="#/users"><i class="uk-icon-user uk-icon-small"></i> Users</a>
+                </li>
+                <li>
+                    <a></a>
+                </li>
+            </ul>
+            <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Home</div>
+        </nav>
+
+        <div ng-view=""></div>
+
+        <div class="uk-margin-large-top uk-margin-small-bottom uk-text-small uk-text-center footer">
+            Wei Chung Chuo. 2015 @ Coding Dojo
+        </div>
+</body>
+</html>

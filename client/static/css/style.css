@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+.background {
+	background-image: url(../images/dark_blue_background-wallpaper-1600x900.jpg);
+  	background-position: center center;
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+ 	background-size: cover;
+ 	background-color:#464646;
+ 	margin: 0;
+ }
+
+ .white-background {
+ 	background: rgba(232, 232, 232, .8);
+ }
+
+.white-font {
+	color: white;
+	font-family: "Lato";
+	font-weight: 100;	
+}
+
+h1 {
+	font-size: 100px !important;
+	letter-spacing: -4px !important;
+}
+
+h2 {
+	font-size: 60px !important;
+	letter-spacing: -2px !important;
+}
+
+h3 {
+	font-size: 40px !important;
+	line-height: 45px !important;
+}
+
+h4 {
+	font-size: 20px !important;
+}
+
+select, option, input, textarea {
+	font-family: "Lato" !important;
+	font-weight: 400 !important;
+	font-size: 14px;
+}
+
+p {
+	font-family: "Lato";
+	font-weight: 300 !important;
+	font-size: 15px;
+}
+
+.vspacer {
+	margin-top: 40px;
+}
+
+.main {
+	height: 300px;
+	margin-top: 200px;
+	padding-left: 16%;
+}
+
+.main2 {
+	min-height: 400px;
+	margin-top: 20px;
+}
+
+.footer {
+	left: 0%;
+	color: white;
+	font-family: "Lato";
+	font-size: 10px;
+	font-weight: 100;
+}
+
+.product_thumb_div {
+	margin: 6px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 16px;
+	width: 150px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+	border-radius: 5px;
+	background-color: white;
+}
+
+.product_thumb_main_div {
+	margin: 1%;
+	padding: 10px;
+	width: 160px;
+	height: 220px;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+	border-radius: 5px;
+	background-color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
+.blank {
+    color: red;
+}
+
+.nav {
+    padding: 10px;
+}

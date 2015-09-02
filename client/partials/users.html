@@ -1,0 +1,33 @@
+<div class="uk-container uk-grid">
+    <div class='uk-width-large-1-1'>
+        <div ng-controller="namesController" class="main2">
+	        <h2 class="white-font">Users</h2>
+	        <h3 class="white-font">Registered Users :)</h3>
+
+            <table class='uk-table uk-table-hover uk-table-striped white-background' style='border:1px solid silver;'>
+                <thead class="white-background">
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td><b>Created Date</b></td>
+                        <td><b>Action</b></td>
+                    </tr>
+                </thead>
+                <tr ng-repeat="name in names | filter:filter_name | orderBy:'order_date'">
+                    <td>
+                        <a href='#/view_user/{{name._id}}' title="View {{name.name}}"><span ng-bind='name.name'></span></a>
+                    </td>
+                    <td>
+                        <span ng-bind="name.name_created_at | date:'MMMM d yyyy h:mma'"></span>
+                    </td>
+                    <td>
+                        <input type="hidden" ng-model='viewId._id' value='{{name._id}}'>
+                        <a href='#/view_user/{{name._id}}' class="uk-button uk-button-primary uk-button-small" title="View">View</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='{{name._id}}/remove_name' class="uk-button uk-button-danger uk-button-small" title="Delete">Delete</a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
